@@ -1,0 +1,32 @@
+{
+  "name": "beef-serializer",
+  "version": "0.0.1",
+  "description": "Library for serializing data of any complexity (supports JSON)",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -r babel-register src/**/*.spec.js --timeout 8000",
+    "prepublish": "npm run babel-prepublish && npm run flow-prepublish",
+    "babel-prepublish": "babel src/ -d lib",
+    "flow-prepublish": "flow-copy-source src lib"
+  },
+  "author": "Marcin Dryka",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-register": "^6.24.0",
+    "chai": "^3.5.0",
+    "flow-bin": "^0.46.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "sinon": "^2.1.0",
+    "sinon-chai": "^2.9.0",
+    "chai-as-promised": "^6.0.0",
+    "chai-like": "^0.2.10",
+    "flow-copy-source": "^1.1.0",
+    "flow-typed": "^2.1.2"
+  }
+}
